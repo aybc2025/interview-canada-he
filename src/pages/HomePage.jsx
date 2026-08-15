@@ -19,10 +19,6 @@ export default function HomePage() {
             מדריך למחפשי עבודה דוברי עברית
           </p>
           <h1 className="font-display text-4xl font-bold mb-3">ראיון בקנדה</h1>
-          <p className="text-[#B9D4D6] leading-relaxed max-w-prose mb-6">
-            בקנדה מצפים שתדברו על ההישגים שלכם בפירוט ובביטחון. שתיקה או צניעות
-            יתר נקראות כחוסר הכנה, לא כענווה.
-          </p>
 
           <div className="flex flex-wrap gap-3">
             <Link
