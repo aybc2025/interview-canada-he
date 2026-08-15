@@ -1,7 +1,7 @@
 import { PARTS } from '../../config/parts';
 
 /**
- * The interview arc — the site's signature element.
+ * The interview arc – the site's signature element.
  *
  * It shows position within the *process* (understand → answer → the room →
  * after), not just chapter number. Deliberately not rendered on the appendix,

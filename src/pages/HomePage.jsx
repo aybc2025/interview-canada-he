@@ -59,7 +59,7 @@ export default function HomePage() {
                 {APPENDIX_PART.title}
               </span>
               <span className="text-sm text-ink-soft">
-                — {APPENDIX_PART.blurb}
+                – {APPENDIX_PART.blurb}
               </span>
             </h2>
             <div className="bg-tie-tint border border-tie rounded-xl px-3">

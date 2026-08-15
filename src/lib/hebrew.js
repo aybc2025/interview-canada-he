@@ -1,7 +1,7 @@
 /**
  * Hebrew-aware normalisation for search.
  * Strips niqqud and cantillation, unifies the several quote characters that
- * appear in Hebrew text, and drops punctuation — so a query typed with a
+ * appear in Hebrew text, and drops punctuation – so a query typed with a
  * straight quote still matches text written with a gershayim, and partially
  * vocalised text stays findable.
  */

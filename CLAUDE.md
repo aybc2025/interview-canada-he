@@ -12,7 +12,7 @@ No need to ask first.
 
 **Important:** this project was authored in an environment with no network
 access, so `npm install` has never actually run and the build has never been
-executed end to end. Treat the first build as a real verification step — fix
+executed end to end. Treat the first build as a real verification step – fix
 whatever errors appear and re-run until it is clean before doing anything else
 you are asked to do.
 
@@ -24,14 +24,14 @@ Likely first-build failure points, in rough order of probability:
 2. **Tailwind logical utilities.** The UI relies on `ps-*`, `pe-*`, `ms-*`,
    `me-*`, `start-*`, `end-*`, `border-s-*`, `rounded-e-*`. These need
    Tailwind **3.3+**. On an older version they compile to nothing and the RTL
-   layout silently breaks — verify the version before debugging layout.
+   layout silently breaks – verify the version before debugging layout.
 3. **`src/generated/` missing.** It is gitignored and produced by
    `npm run content`, which `prebuild` invokes. If an editor or a bare
    `vite build` skips the prebuild step, the JSON imports fail. Run
    `npm run content` manually and retry.
 
 After the first successful build, run `npm run preview` and check a chapter
-page on a narrow viewport — tables switch to a stacked card layout below the
+page on a narrow viewport – tables switch to a stacked card layout below the
 `sm` breakpoint, and that is the layout most likely to have gone wrong.
 
 ## What you can NOT do here, even if asked
@@ -44,12 +44,12 @@ page on a narrow viewport — tables switch to a stacked card layout below the
   `public/fonts/README.txt`). The site is designed to work without them.
 - **Add the downloadable Word/PDF.** The owner supplies those, using the exact
   filenames in `public/downloads/README.txt`. Do not generate substitutes and
-  do not build a PDF-generation feature — this was decided explicitly.
+  do not build a PDF-generation feature – this was decided explicitly.
 
 ## Architecture
 
 ```
-content/            Markdown source of the guide — the editable content
+content/            Markdown source of the guide – the editable content
 scripts/            build-content.mjs: markdown -> JSON, runs on prebuild
 src/generated/      Build output. Gitignored. Never edit by hand.
 src/config/         parts.js (the four parts), constants.js (storage, downloads)
@@ -67,7 +67,7 @@ src/pages/          One per route
 To change the text of the guide, edit the markdown in `content/`. Never edit
 `src/generated/`.
 
-### Non-obvious choices — do not "clean up"
+### Non-obvious choices – do not "clean up"
 
 - **`scripts/build-content.mjs` has a hand-written markdown parser and no
   dependencies.** This is deliberate. The guide uses exactly six block types,
@@ -78,13 +78,13 @@ To change the text of the guide, edit the markdown in `content/`. Never edit
 - **`src/lib/Bidi.jsx` captures multi-word Latin runs as a single unit.**
   Isolating each word separately renders phrases like "Land acknowledgement"
   back-to-front in RTL. The regex looks over-complicated; it is not. There is a
-  test case list in the file's comments — keep them passing.
+  test case list in the file's comments – keep them passing.
 - **Heading anchors are positional (`h-0`, `h-1`, …), not slugified.** Hebrew
   does not transliterate usefully. The trade-off is that inserting a heading
   mid-chapter shifts the anchors below it and breaks previously shared deep
   links. Accepted knowingly; prefer appending headings where practical.
 
-## Intentional decisions — do not revert without asking
+## Intentional decisions – do not revert without asking
 
 - **No backend, no accounts, no Firebase, no Netlify.** There is no API key,
   no user data and no login, so GitHub Pages is the correct target. Adding a
@@ -102,7 +102,7 @@ To change the text of the guide, edit the markdown in `content/`. Never edit
   `virtual:pwa-register/react` module; since the build could not be tested
   here, the safer option was chosen. Switching to a banner later is fine.
 - **No PDF generation.** The owner supplies the Word and PDF files directly.
-  Explicitly decided — do not build an export feature.
+  Explicitly decided – do not build an export feature.
 - **The appendix is outside the numbered sequence.** It has no chapter number
   and `ArcRail` deliberately renders nothing for it. This is not a bug.
 - **No META copy.** The site never describes its own structure ("14 chapters,
@@ -125,7 +125,7 @@ Push to `main` → `.github/workflows/deploy.yml` → build → GitHub Pages.
 Automatic on push. Two things are manual and happen outside this repo:
 
 1. Enabling Pages with **Source: GitHub Actions** (once, by the owner).
-2. Committing `package-lock.json` — CI uses `npm ci`, which fails without it.
+2. Committing `package-lock.json` – CI uses `npm ci`, which fails without it.
    Run `npm install` locally and commit the lockfile before the first push.
 
 `vite.config.js` sets `base: '/interview-canada-he/'` to match the Pages path.

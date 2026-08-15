@@ -6,7 +6,7 @@ import { SEARCH_MAX_RESULTS, SEARCH_MIN_CHARS } from '../config/constants';
  * Client-side search over the build-time index.
  *
  * The index is loaded lazily on first use rather than bundled into the initial
- * download — most visitors read rather than search, and the guide should open
+ * download – most visitors read rather than search, and the guide should open
  * fast on a phone.
  */
 export default function useSearch() {

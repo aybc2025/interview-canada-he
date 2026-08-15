@@ -5,12 +5,12 @@ export const STORAGE_KEYS = {
 export const DOWNLOADS = [
   {
     file: 'madrich-raion-canada.docx',
-    label: 'המדריך המלא — Word',
+    label: 'המדריך המלא – Word',
     note: 'קובץ ניתן לעריכה',
   },
   {
     file: 'madrich-raion-canada.pdf',
-    label: 'המדריך המלא — PDF',
+    label: 'המדריך המלא – PDF',
     note: 'לקריאה והדפסה',
   },
 ];

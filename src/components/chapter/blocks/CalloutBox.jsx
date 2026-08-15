@@ -1,7 +1,7 @@
 import { Spans } from '../../../lib/Bidi';
 
 /*
-  Variants never rely on colour alone — each carries a text label as well, so
+  Variants never rely on colour alone – each carries a text label as well, so
   the distinction survives greyscale printing and colour-blind readers.
 */
 const VARIANTS = {

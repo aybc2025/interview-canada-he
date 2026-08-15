@@ -16,7 +16,7 @@ export default function HeadingAnchor({ block }) {
       setCopied(true);
       setTimeout(() => setCopied(false), 1600);
     } catch {
-      /* clipboard blocked — the anchor still works as a normal link */
+      /* clipboard blocked – the anchor still works as a normal link */
     }
   };
 

@@ -3,7 +3,7 @@ import { Spans } from '../../../lib/Bidi';
 /**
  * Tables are the densest thing in the guide and the hardest to fit on a phone.
  * Below the `sm` breakpoint each row becomes a stacked card with the column
- * name as a label — a horizontally scrolling table is technically intact but
+ * name as a label – a horizontally scrolling table is technically intact but
  * practically unreadable one-handed.
  */
 export default function DataTable({ block }) {

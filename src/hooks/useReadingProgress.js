@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-/** Visual only — how far through the current chapter the reader is. */
+/** Visual only – how far through the current chapter the reader is. */
 export default function useReadingProgress(ref) {
   const [pct, setPct] = useState(0);
 

@@ -8,6 +8,6 @@ Optional. Drop these four .woff2 files here to enable the intended typography:
 All three families are open source and available from Google Fonts. Download
 the Hebrew subset as woff2 and place the files here.
 
-The site works without them — src/styles/index.css declares local() and
+The site works without them – src/styles/index.css declares local() and
 system fallbacks first, so nothing breaks. You just get system Hebrew faces
 instead of the intended ones.

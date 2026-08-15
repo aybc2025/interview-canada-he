@@ -4,7 +4,7 @@ import { STORAGE_KEYS } from '../config/constants';
 /**
  * The single piece of user state the site keeps. Everything else is static.
  * Fails silently when storage is unavailable (private browsing, blocked
- * cookies) — a missing "continue where you left off" is not worth an error.
+ * cookies) – a missing "continue where you left off" is not worth an error.
  */
 export default function useLastRead() {
   const [lastRead, setLastRead] = useState(null);
@@ -14,7 +14,7 @@ export default function useLastRead() {
       const raw = localStorage.getItem(STORAGE_KEYS.lastRead);
       if (raw) setLastRead(JSON.parse(raw));
     } catch {
-      /* storage unavailable — feature simply stays off */
+      /* storage unavailable – feature simply stays off */
     }
   }, []);
 

@@ -18,7 +18,7 @@ export default function SearchPage() {
 
         {short ? (
           <p className="text-ink-soft leading-relaxed max-w-prose">
-            הקלידו מילה או שתיים כדי לחפש בכל המדריך — למשל <b>שכר</b>,{' '}
+            הקלידו מילה או שתיים כדי לחפש בכל המדריך – למשל <b>שכר</b>,{' '}
             <b>פנקס</b>, <b>שאלות אסורות</b> או <b>משוב</b>.
           </p>
         ) : loading ? (
@@ -28,7 +28,7 @@ export default function SearchPage() {
             <p className="font-bold mb-2">אין תוצאות ל"{query}".</p>
             <p className="text-ink-soft leading-relaxed">
               נסו מילה אחת במקום צירוף, או מונח כללי יותר. החיפוש מתעלם מניקוד
-              ומגרשיים, אך לא מזהה שורשים — "ראיון" ו"ראיונות" יחזירו תוצאות
+              ומגרשיים, אך לא מזהה שורשים – "ראיון" ו"ראיונות" יחזירו תוצאות
               שונות.
             </p>
           </div>

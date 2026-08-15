@@ -3,7 +3,7 @@ id: appendix-prep
 number: 0
 part: appendix
 title: שיטת הכנה לראיון
-summary: תשעה שלבים לבניית תיק הכנה — מפירוק המשרה ועד סגירת מעגל אחרי הראיון.
+summary: תשעה שלבים לבניית תיק הכנה – מפירוק המשרה ועד סגירת מעגל אחרי הראיון.
 slug: preparation-method
 ---
 

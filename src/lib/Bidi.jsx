@@ -7,7 +7,7 @@ import React from 'react';
  * Latin word, because the punctuation adopts the neighbouring run's direction.
  * The guide contains dozens of Latin terms (START, STAR, PWA, InDesign), so
  * this is applied centrally at render time rather than marked up by hand in
- * the content files — content authors shouldn't have to think about it.
+ * the content files – content authors shouldn't have to think about it.
  */
 
 // Matches a whole run of Latin text, including the spaces *between* Latin
@@ -25,7 +25,7 @@ export function isolate(text) {
   while ((m = LATIN_RUN.exec(text)) !== null) {
     let run = m[0];
     // Trailing punctuation (a full stop, a hyphen) belongs to the Hebrew
-    // sentence, not to the Latin term — leave it outside the isolate.
+    // sentence, not to the Latin term – leave it outside the isolate.
     const trimmed = run.replace(/[^A-Za-z0-9]+$/, '');
     if (!trimmed) continue;
     const start = m.index;
