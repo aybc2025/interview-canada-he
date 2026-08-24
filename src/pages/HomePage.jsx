@@ -18,7 +18,6 @@ export default function HomePage() {
           <p className="font-util text-[11px] tracking-widest text-[#8FBFC4] mb-2">
             מדריך למחפשי עבודה דוברי עברית
           </p>
-          <h1 className="font-display text-4xl font-bold mb-3">ראיון בקנדה</h1>
           <h1 className="font-display text-4xl font-bold mb-3">ראיון עבודה בקנדה</h1>
 
           <div className="flex flex-wrap gap-3">
