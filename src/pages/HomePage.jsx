@@ -18,9 +18,8 @@ export default function HomePage() {
           <h1 className="font-display text-4xl font-bold mb-3">ראיון עבודה בקנדה</h1>
 
           <div className="flex flex-wrap gap-3">
-            <Link
-              to={`/chapter/${first.slug}`}
-              className="bg-[#8FD3D8] text-[#0F2830] font-util font-bold rounded-xl px-5 py-3 min-h-[44px] flex items-center"
+            <p className="bg-[#8FD3D8] text-[#0F2830] font-util font-bold rounded-xl px-5 py-3 min-h-[44px] flex items-center">מדריך לדוברי עברית</p>
+              
             >
               {first.title}
             </Link>
